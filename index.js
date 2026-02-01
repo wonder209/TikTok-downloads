@@ -1,8 +1,12 @@
-const express = require('express');
-const { exec } = require('yt-dlp-exec'); // Ensure yt-dlp is installed on your OS!
-const path = require('path');
-const fs = require('fs');
-const { v4: uuidv4 } = require('uuid');
+import express from 'express';
+import { exec } from 'yt-dlp-exec';
+import path from 'path';
+import fs from 'fs';
+import { v4 as uuidv4 } from 'uuid';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = 3000;
