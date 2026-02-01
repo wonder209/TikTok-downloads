@@ -10,11 +10,7 @@ const PORT = 3000;
 app.use(express.urlencoded({ extended: true }));
 
 // FIX 1: Use __dirname
-const DOWNLOAD_DIR = path.join(__dirname, 'downloads');
-
-if (!fs.existsSync(DOWNLOAD_DIR)) {
-    fs.mkdirSync(DOWNLOAD_DIR);
-}
+const DOWNLOAD_DIR = '/tmp';
 
 const HTML_TEMPLATE = () => `
 <!DOCTYPE html>
